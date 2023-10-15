@@ -9,7 +9,7 @@ function findAllSmallThenTarget(nums, target) {
 
   while (left + 1 < right) {
     const mid = left + Math.floor((right - left) / 2);
-    if (mid > target) {
+    if (nums[mid] > target) {
       right = mid;
     } else {
       left = mid;
@@ -26,7 +26,6 @@ function findAllSmallThenTarget(nums, target) {
  * @return {number}
  */
 const breakfastNumber = function (staple, drinks, x) {
-  staple.sort((a, b) => a - b);
   drinks.sort((a, b) => a - b);
 
   const MOD = 1e9 + 7;
